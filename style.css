@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff4d4d 0%, #ff8533 100%);
+    padding: 2rem;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    color: #ff4d4d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Classes Section */
+.classes {
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.classes h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.class-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+}
+
+.class-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.class-card h3 {
+    padding: 1rem;
+    color: #333;
+}
+
+.class-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.class-card ul {
+    padding: 1rem;
+    list-style: none;
+}
+
+.class-card li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.class-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.class-button:hover {
+    background-color: #ff3333;
+}
+
+/* Trainers Section */
+.trainers {
+    padding: 5rem 2rem;
+    background-color: white;
+}
+
+.trainers h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trainer-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.trainer-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.trainer-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.trainer-card p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Membership Section */
+.membership {
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.membership h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.membership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.membership-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.membership-card.featured {
+    transform: scale(1.05);
+    border: 2px solid #ff4d4d;
+}
+
+.membership-card:hover {
+    transform: translateY(-5px);
+}
+
+.membership-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.membership-card .price {
+    font-size: 2rem;
+    color: #ff4d4d;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.membership-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.membership-card li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.membership-button {
+    padding: 1rem 2rem;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.membership-button:hover {
+    background-color: #ff3333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .class-grid,
+    .trainer-grid,
+    .membership-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .membership-card.featured {
+        transform: none;
+    }
+} 
